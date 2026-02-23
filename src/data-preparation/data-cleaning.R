@@ -23,12 +23,17 @@ title.basics_movies <- filter(title.basics, titleType == "movie")
 
 # Merging the title.basics and title.ratings datasets
 
-IMDB_movies <- left_join(title.basics_movies, title.ratings, by = "tconst")
+  IMDB_movies <- left_join(title.basics_movies, title.ratings, by = "tconst")
 
-# Remove movies without genre and drop isAdult and endYear
+# Remove NA's from genres, runtimeMinutes, averageRating and numVotes
+# and drop titleType, isAdult, startYear and endYear
+
 IMDB_movies <- IMDB_movies %>%
-  filter(!is.na(genres)) %>%
-  select(-isAdult, -endYear)
+  filter(!is.na(genres),
+         runtimeMinutes <= 360,
+         !is.na(averageRating),
+         numVotes > 100) %>%
+  select(-titleType, -isAdult, -startYear, -endYear)
 
 # Splitting genres
 IMDB_movies <- IMDB_movies %>% 
