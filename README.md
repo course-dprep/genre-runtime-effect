@@ -6,7 +6,7 @@
 > Feel free to delete this text.
 
 
-# Title of your Project: The role of film length and audience scores
+# The longer the better: the relationship between film length and audience scores between genres
 
 *(Describe the purpose of this project)*
 
@@ -33,14 +33,15 @@ runtime on ratings in most likely not uniform, and it might depend on viewing pr
 
 <br>
 
-**Based on this, the main research question that will be examined is described as:**
+**Based on these notions, the main research question that will be examined is described as:**
 
 *- What is the relationship between running time (IV) and audience ratings (DV) in movies, and how does this differ between movie genres?*
 
 
 ## Data
 
-*What dataset(s) did you use? How was it obtained?*
+- What dataset(s) did you use? How was it obtained?
+<br>
 
 To examine the research question, two publicly available datasets from the IMBD website
 were utilized.
@@ -51,14 +52,15 @@ The data sets used:
 
 <br>
 
-*How many observations are there in the final dataset?*
+- How many observations are there in the final dataset?
 
-Approximately 140.000 after filtering for movies, and NA's
-for genre's and audience ratings.
+
+The merged dataset contains approximately 140.000 observations after filtering for movies, their running time (<=360) and number of votes (>100),
+where missing values for genre's and audience ratings were filtered out.
 
 <br>
 
-*Include a table of variable description/operstionalisation.* 
+- Include a table of variable description/operstionalisation.
 
 
 The main variables that will be examined:
@@ -75,9 +77,11 @@ The main variables that will be examined:
 
 For data preparation, datawrangling principles were administered. Firstly the dataset title.basics.tsv.gz 
 was filtered to only include movie titles, thereby excluding other included film-types in the dataset such 
-as tv-shows and short-films. Additionally, the dataset was structured in ascending order of release year.  
+as tv-shows and short-films. Next, the dataset title.ratings.tsv.gz was merged.
+This merged dataset was structured in ascending order of release year.  
 
-Next, both datasets were merged, ...
+Moreover, next to flitering for missing values for genre and audience scores, the observations were filtered to
+have a running time of up to 360 minutes and a minimum number of 100 recorded audience votes.
 
 
 As for the method of analysis, Multiple Linear Regression (MLR) with interaction terms will be used.
@@ -131,15 +135,14 @@ team-projects-team-4/
 ```
 
 
-
 ## Dependencies 
 
 *Explain any tools or packages that need to be installed to run this workflow.*
 
 The main packages needed to run this workflow:
 
-- library(readr)  
-- library(tidyverse)  
+- library(readr) - used to read selected datasets  
+- library(tidyverse) - used for data wrangling and analysis  
 
 ## Running Instructions 
 
@@ -153,4 +156,4 @@ The main packages needed to run this workflow:
 
 This project is set up as part of the Master's course [Data Preparation & Workflow Management](https://dprep.hannesdatta.com/) at the [Department of Marketing](https://www.tilburguniversity.edu/about/schools/economics-and-management/organization/departments/marketing), [Tilburg University](https://www.tilburguniversity.edu/), the Netherlands.
 
-The project is implemented by team < x > members: < insert member details>
+The project is implemented by team 4, members: < insert member details>
