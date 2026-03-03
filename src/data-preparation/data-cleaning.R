@@ -44,5 +44,40 @@ IMDB_movies <- IMDB_movies %>%
               values_fill = 0,
               names_prefix = "genre_")
 
-#  List of genres
-# names(IMDB_movies)[grepl("genre", names(IMDB_movies))]
+#Identifying genres and counting frequency of each genre
+genre_cols <- grep("^genre_", names(IMDB_movies), value = TRUE)
+
+genre_frequency <- sort(colSums(IMDB_movies[genre_cols]), decreasing = TRUE)
+
+genre_frequency
+
+# % of frequency of each genre
+genre_percentage <- genre_frequency / nrow(IMDB_movies) * 100
+
+genre_percentage <- round(genre_percentage, 1)
+
+genre_percentage
+
+
+# Removing genres with frequency < 1%
+
+genres_to_remove <- names(genre_percentage[genre_percentage < 1])
+genres_to_remove
+
+IMDB_movies <- IMDB_movies %>%
+  select(-all_of(genres_to_remove))
+
+
+# # Identify remaining genre columns
+genre_cols_kept <- grep("^genre_", names(IMDB_movies), value = TRUE)
+
+# Convert to long format for plotting
+IMDB_long <- IMDB_movies %>%
+  pivot_longer(
+    cols = all_of(genre_cols_kept),
+    names_to = "genre",
+    values_to = "has_genre"
+  ) %>%
+  filter(has_genre == 1) %>%
+  mutate(genre = str_remove(genre, "^genre_"))
+
