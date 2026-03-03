@@ -13,11 +13,14 @@ and how this relationship may differ between a selection of movie genres.
 
 
 ## Motivation
-The movie industry continuously tries to understand what factors influence audience ratings, as they play a very important role in determining commercial success and popularity. One characteristic that might impact viewer’s perceptions is running time. Longer films can allow for more extensive storytelling and character development, however they may also demand higher mental effort and time commitment from the audience. As a consequence, the relationship between running time and audience ratings remains unclear and worth looking into.
-Previous research in media and entertainment studies suggests that structural movie characteristics can have an impact on audience evaluations and satisfaction. (Cini, K., & Abela, J. (2025)
-Furthermore, audience expectations on time might differ between movie genres. For instance, viewers might expect longer runtimes in genres like drama, considering the complexity of the storyline, whereas fast paced runtimes might be expected for low cognitive effort genres, such as comedies. Considering this, the effect of runtime on ratings in most likely not uniform, and it might depend on viewing preferences.
-Genre-based expectation theories propose that consumers develop category-specific expectations that influence their evaluations of products and experiences. (Jeffres, L. W., Atkin, D. J., & Neuendorf, K. A., 2023)
-Also, theories related to cognitive load and information processing suggest that increased exposure time might have an impact on judgments due to differences in mental effort. 
+
+The movie industry continuously tries to understand what factors influence audience ratings, as they play an important role in determining commercial success and popularity. One characteristic that might impact viewers’ perceptions is running time. Longer films can allow for more extensive storytelling and character development; however, they may also demand higher mental effort and time commitment from the audience. As a consequence, the relationship between running time and audience ratings remains unclear and worth investigating.
+
+Previous research in media and entertainment studies suggests that structural movie characteristics can influence audience evaluations and satisfaction (Cini & Abela, 2025).
+
+Furthermore, audience expectations may differ between movie genres. For instance, viewers might expect longer runtimes in genres such as drama, whereas faster-paced runtimes may be expected in low cognitive effort genres such as comedies. Genre-based expectation theories propose that consumers develop category-specific expectations that influence their evaluations (Jeffres, Atkin, & Neuendorf, 2023).
+
+In addition, theories related to cognitive load and information processing suggest that increased exposure time may influence judgments due to differences in mental effort.
 
 <br>
 
