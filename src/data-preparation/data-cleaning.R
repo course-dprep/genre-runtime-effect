@@ -82,5 +82,5 @@ IMDB_long <- IMDB_movies %>%
 
 
 write_csv(IMDB_long, "../../gen/temp/imdb_long.csv")
-
+write_csv(IMDB_movies, "../../gen/temp/imdb_movies.csv")
 
